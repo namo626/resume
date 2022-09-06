@@ -1,0 +1,140 @@
+\documentclass[11pt]{article}
+
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\usepackage{titling}
+\usepackage[left=1.0cm, right=1.0cm, top=1.5cm, bottom=2cm]{geometry}
+%\usepackage{mathpazo}
+%\usepackage[default]{gfsbodoni}
+%\usepackage{mlmodern}
+%\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage[skins,breakable]{tcolorbox}
+\newlist{myitemize}{itemize}{5}
+\setlist[myitemize]{label=\textbullet,labelsep=.5cm,leftmargin=3cm,font=\sc,itemsep=0pt,topsep=0pt}
+\pagenumbering{gobble}
+
+\titleformat{\section}
+{\normalsize\bfseries\uppercase}
+{}
+{0em}
+{}[\titlerule]
+
+\titleformat{\subsection}[runin]
+{\bfseries}
+{}
+{0em}
+{}
+
+\titleformat{\subsubsection}
+{\bfseries}
+{}
+{0em}
+{}
+
+% \titlespacing{\subsubsection}
+% {0pt}{1em}{0.1em}
+
+\renewcommand{\maketitle}{
+  \begin{center}
+    {\Large\bfseries\theauthor}
+
+    namo@utexas.edu --- (559) 545-2025 \\
+    \url{github.com/namo626}
+  \end{center}
+}
+\newenvironment{body}{}
+%{\begin{tcolorbox}[blanker,breakable,left=1.5cm]}
+%  {\end{tcolorbox}}
+%{\hspace{.1\textwidth} \begin{trivlist}\leftskip=.9\textwidth}
+%{\end{trivlist}}
+
+\begin{document}
+
+\title{Resume}
+\author{CHAYANON (NAMO) WICHITRNITHED}
+\maketitle
+
+\section{Education}
+\begin{body}
+  \textbf{The University of Texas at Austin} \hfill May 2020 - Present\\
+  Oden Institute for Computational Engineering and Sciences \\
+  Ph.D. Computational Science, Engineering, and Mathematics \\
+  Advisor: Clint Dawson \\
+  GPA: 3.9/4.0 \\
+  Research areas: storm surge and coastal simulation, numerical methods for fluids, high performance computing \\
+
+\noindent
+  \textbf{Georgia Institute of Technology} \hfill August 2016 - May 2020 \\
+  B.S. Physics with Highest Honor \\
+  Minor in Scientific \& Engineering Computing \\
+  GPA: 3.94/4.00
+\end{body}
+% \section{Research Areas}
+% \begin{body}
+%   Storm surge simulations, finite element methods, high performance computing
+% \end{body}
+\section{Research Experience}
+\begin{body}
+
+  \textbf{Graduate Research Assistant} \hfill \textmd{May 2021 - Present} \\
+  \textit{Computational Hydraulics Group, Oden Institute}
+  \begin{itemize}[leftmargin=*]
+    \itemsep0em
+  \item Developing a coupled continuous/discontinuous Galerkin method based on the ADvanced CIRCulation model (ADCIRC) to improve modeling of storm surge and coastal flooding
+  \item Compound flood modeling: implement and test parametric rainfall models on a discontinuous Galerkin variant of ADCIRC to better capture the interaction of various flooding sources
+  \item Historic Flood level project: working on a project with the Texas Water Development Board (TWDB) on determining worst-case scenario flood level by running ADCIRC simulations for historical storms. Modified a large FEM mesh to a more compact one for use in this project.
+  \item Parallel HEC-RAS: help implementing an MPI-parallel version of the River Analysis System (HEC-RAS)
+  \item MusiKal project: modified a global FEM mesh to a smalller one for use in this project.
+  \end{itemize}
+  \textbf{Undergraduate Research Assistant} \hfill \textmd{2017 - 2020} \\
+  \textit{Pattern Formation and Control Laboratory, Georgia Tech}
+\begin{itemize}[leftmargin=*]
+  \itemsep0em
+\item Generated MATLAB simulations of quasi-2D turbulent flows and their visualizations.
+
+\item Performed particle image velocimetry (PIV) to compare experimental data with simulation.
+
+\item
+Implemented  and tuned recurrent neural networks (RNNs) to predict chaotic trajectories of dynamical systems.
+\item Tested and optimized parameter estimation algorithms for quasi-2D flows using simulation and experimental data.
+
+\end{itemize}
+
+\section{Technical Skills}
+\begin{itemize}[leftmargin=*]
+  \itemsep0em
+\item \textbf{Programming}
+C,C\texttt{++}, Fortran, MPI, OpenMP, Python, MATLAB, Mathematica, Bash, HTML
+\item \textbf{Tools}
+GNU/Linux, Git, GNU Make, CMake, \LaTeX, QGIS, Tracker
+\item \textbf{Research}
+ADvanced CIRCulation model (ADCIRC), Figuregen, OceanMesh2D
+\end{itemize}
+
+\end{body}
+\section{Conference Presentations}
+\begin{body}
+  \begin{itemize}[leftmargin=*]
+    \itemsep0em
+   \item \textit{Developing a Compound Flood Model using the Discontinuous Galerkin Method}. Planet Texas 2050 Conference. University of Texas at Austin, Austin, TX, April 2022.
+  \item \textit{The Impact of Boundary Conditions on Spectral Condensation of Turbulence: Numerics and Experiment}.
+  $71^{st}$ Annual Meeting of the APS Division of Fluid Dynamics. Georgia World Congress Center, Atlanta, GA, November 2018.
+  \end{itemize}
+
+\end{body}
+\section{Honors \& Awards}
+\begin{itemize}[leftmargin=*]
+  \itemsep0em
+  \item National Initiative for Modeling and Simulation (NIMS) graduate fellowship, 2020 - 2024
+  \item Runners up - Planet Texas 2050 Symposium Student Poster Competition, April 2022
+  \item Faculty Honors, Fall 2016 - Spring 2018
+\end{itemize}
+
+\section{Additional information}
+\begin{itemize}[leftmargin=*]
+  \itemsep0em
+\item \textbf{Languages} Fluent in Thai
+\item \textbf{Work Eligibility} Extended eligibility to work in the U.S.
+\end{itemize}
+\end{document}

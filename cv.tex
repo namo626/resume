@@ -1,14 +1,21 @@
-\documentclass{article}
+\documentclass[11pt]{article}
 
 \usepackage[hidelinks]{hyperref}
 \usepackage{titlesec}
 \usepackage{titling}
-\usepackage[left=3cm, right=3cm, top=3cm, bottom=2cm]{geometry}
-\usepackage{mathpazo}
+\usepackage[left=2cm, right=2cm, top=3cm, bottom=2cm]{geometry}
+%\usepackage{mathpazo}
+%\usepackage[default]{gfsbodoni}
+\usepackage{mlmodern}
 \usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage[skins,breakable]{tcolorbox}
+\newlist{myitemize}{itemize}{5}
+\setlist[myitemize]{label=\textbullet,labelsep=.5cm,leftmargin=3cm,font=\sc,itemsep=0pt,topsep=0pt}
+\pagenumbering{gobble}
 
 \titleformat{\section}
-{\large\bfseries}
+{\large\bfseries\uppercase}
 {}
 {0em}
 {}[\titlerule]
@@ -25,74 +32,106 @@
 {0em}
 {}
 
-\titlespacing{\subsubsection}
-{0pt}{1em}{0.1em}
+% \titlespacing{\subsubsection}
+% {0pt}{1em}{0.1em}
 
 \renewcommand{\maketitle}{
   \begin{center}
     {\Large\bfseries\theauthor}
 
-    namowi@gatech.edu --- 559-5452025
+    namo@utexas.edu --- 559-545-2025
 
-    329566 Georgia Tech Station, Atlanta, GA 30332
+    5012 Duval, Austin, TX 78751
   \end{center}
 }
+\newenvironment{body}{}
+%{\begin{tcolorbox}[blanker,breakable,left=1.5cm]}
+%  {\end{tcolorbox}}
+%{\hspace{.1\textwidth} \begin{trivlist}\leftskip=.9\textwidth}
+%{\end{trivlist}}
 
 \begin{document}
 
 \title{Resume}
-\author{Chayanon Wichitrnithed}
+\author{Chayanon (Namo) Wichitrnithed}
 \maketitle
 
-
 \section{Education}
-\subsubsection{Georgia Institute of Technology \hfill Expected graduation: May 2020}
-B.S. in Physics
+\begin{body}
+  \subsubsection{Oden Institute for Computational Engineering and Sciences \hfill \textmd{May 2020 - Present}}
+  University of Texas at Austin \\
+  Ph.D. Computational Science, Engineering, and Mathematics \\
+  Advisor: Clint Dawson \\
+  GPA: 3.9
 
-Minor in Scientific \& Engineering Computing
-
-Overall GPA: 3.92/4.00
-
-\section{Relevant Coursework}
- Computational Science and Engineering (CSE) Algorithms, Numerical Analysis, Computational Problem Solving for Scientists and Engineers, Complex Analysis, Differential Equations, Linear Algebra, Classical Mechanics, Quantum Mechanics, Classical Electrodynamics
+  \subsubsection{Georgia Institute of Technology \hfill \textmd{August 2016 - May 2020}}
+  B.S. Physics with Highest Honor \\
+  Minor in Scientific \& Engineering Computing \\
+  GPA: 3.94
+\end{body}
+\section{Research Areas}
+\begin{body}
+  Storm surge simulations, finite element methods, high performance computing
+\end{body}
 
 \section{Technical Skills}
+\begin{body}
 \subsection{Programming Languages}
-Python, MATLAB, C, Haskell, Scheme, Java
+
+\hfill C,C++, Fortran, Python, MATLAB
+
+\subsection{Software}
+\hfill ADCIRC, DG-SWEM
 
 \subsection{Others}
-Familiarity with GNU/Linux, \LaTeX, Tracker
+\hfill GNU/Linux, Git, \LaTeX, Tracker
 
+\end{body}
 \section{Research Experience}
+\begin{body}
 
-\subsubsection{Research Assistant, Pattern Formation and Control Lab, Georgia Tech}
-\noindent
-\textit{Fall 2017 - Present}
+  \subsubsection{Graduate Research Assistant \hfill \textmd{2021 - Present}}
+  Computational Hydraulics Group, Oden Institute
+  \begin{itemize}[leftmargin=*]
+  \item Adding features to DG-SWEM
+  \item Cutting mesh
+  \item Coupling ADCIRC and DG-SWEM
+  \end{itemize}
+  \subsubsection{Undergraduate Research Assistant \hfill \textmd{2017 - 2020}}
+  Pattern Formation and Control Lab, Georgia Tech
+\begin{itemize}[leftmargin=*]
+\item Under the guidance of Dr. Michael Schatz and Dr. Roman Grigoriev, investigated behavior of current-driven quasi-2D flows in a chessboard magnet array. Responsible for generating MATLAB simulations for variations of the flow and their visualizations. Performed particle image velocimetry (PIV) to compare experimental data with simulation, particularly in the turbulent regime.
 
-Under the guidance of Dr. Michael Schatz and Dr. Roman Grigoriev, investigated behavior of current-driven quasi-2D flows in a chessboard magnet array. Responsible for generating MATLAB simulations for variations of the flow and their visualizations. Currently performing particle image velocimetry (PIV) to compare experimental data with simulation, particularly in the turbulent regime. \\
 
-\noindent
-\textit{Summer 2019}
+\item Tested the accuracy of a parameter estimation algorithm of quasi-2D flows using simulation and experimental data. Assisted in identifying the impact of different components of the program on the performance of the algorithm.
 
-Tested the accuracy of a data-driven algorithm in estimating parameters of quasi-2D flows using simulation and experimental data. Assisted in identifying the impact of different components of the program on the performance of the algorithm. \\
-
-\noindent
-\textit{Summer 2018}
-
+\item
 Implemented artificial neural networks (ANNs) to predict chaotic trajectories. Experimented with different models and tunings of ANNs and tested their behavior on several nonlinear systems.
 
+\end{itemize}
 % \subsubsection{Contestant, International Young Physicists' Tournament \hfill Fall 2015 - Summer 2016}
 % Selected as one of Thailand's representatives to participate in the competition set in Ekaterinburg, Russia.\footnote{Could not attend the main event at Ekaterinburg due to hospitalization.} The selection process took place in Bangkok, and each round of selection involved solving the given physics problems\footnote{The problem set for 2016 can be found at \url{http://iypt.org/images/e/ef/problems2016.pdf}} through experimentations in groups, presenting the results to judges, and questioning other groups' results.
 
 % \subsubsection{Lab Assistant, University of Hawaii at Manoa \hfill Summer 2014}
 % Project title: \textit{Characterization of the Badnavirus TaBV (Taro Bacilliform Virus) in Hawaii’s Taro (Colocasia esculenta)}. Collected different taro leaf samples from plantation site and probed their genetic information to determine the presence of TaBV. Assisted researchers in laboratory work such as cleaning equipment and organizing recorded data in Excel.
 
-\section{Presentation}
-\textit{The Impact of Boundary Conditions on Spectral Condensation of Turbulence: Numerics and Experiment}
+\end{body}
+\section{Presentations}
+\begin{body}
+  \begin{enumerate}[leftmargin=*]
+  \item Planet Texas 2050 Conference \hfill Apr 2022 \\
+    Austin, TX \\
+    \textit{Developing a Compound Flood Model using the Discontinuous Galerkin Method}
 
-$71^{st}$ Annual Meeting of the APS Division of Fluid Dynamics
+  \item $71^{st}$ Annual Meeting of the APS Division of Fluid Dynamics \hfill Nov 2018 \\
+  Atlanta, GA \\
+  \textit{The Impact of Boundary Conditions on Spectral Condensation of Turbulence: Numerics and Experiment}
 
-November 2018,
-Atlanta, GA
+  \end{enumerate}
 
+\end{body}
+\section{Awards}
+\begin{body}
+  NIMS Fellowship, UT Austin \hfill 2020 - 2024
+\end{body}
 \end{document}
